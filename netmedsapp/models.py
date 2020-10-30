@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class medicine_type(models.Model):
     medicine_genre = models.CharField(max_length=64)
@@ -17,7 +18,8 @@ class Medicines(models.Model):
     dosage = models.CharField(max_length=1000)
     safety_info = models.CharField(max_length=1000)
     other_info = models.CharField(max_length=1000)
-    image = models.ImageField(upload_to='images/')
+    # image = models.ImageField(upload_to='images/')
+    image = CloudinaryField('image')
     genres = models.ManyToManyField(medicine_type, blank=True, null=True, related_name="Medicines")
 
     def __str__(self):
