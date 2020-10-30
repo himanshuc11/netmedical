@@ -1,0 +1,21 @@
+{%extends 'netmedsapp/base.html'%}
+
+
+{%block title%}
+    <title>Netmedical</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h2 style="color: rgb(27,67,50);">Find your prescription drug</h2>
+    {% for query in queryset %}
+    <div class="genres1">
+        <ul style="list-style-type:none;" >
+            <li>
+                <a href="{% url 'medicine_genre' query.medicine_genre %}" class="genres1">{{query.medicine_genre}}</a>
+            </li>
+        </ul>    
+    </div>
+    {% endfor %}
+{% endblock %}

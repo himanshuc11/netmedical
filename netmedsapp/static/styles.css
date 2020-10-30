@@ -1,0 +1,296 @@
+
+
+.navbar-custom{
+    background-color:rgb(109, 196, 139);
+    
+    
+}
+.navbar-custom.navbar-text{
+    color: black;
+}
+
+a{
+    color: black; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: medium;
+}
+
+a:hover{
+    color:rgb(82, 160, 108);
+    text-decoration-line: none;
+}
+
+
+body{
+
+    margin-top: 115px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(27,67,50);
+    background-color: rgb(241,241,241);
+    
+    
+    
+}
+
+.contactus{
+    color:black;
+    text-align: center;
+    border-top: 3px rgb(82,183,136) solid; 
+    background-color: rgb(212, 211, 211);
+}
+
+.nav-link{
+    margin: 30px;
+    
+}
+
+.container{
+   /* border-bottom:  3px lightblue solid; */
+    padding: 0%;
+    
+}
+
+.medicinegrid{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    padding-top: 20px;
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+
+.card{
+    border: 1px whitesmoke solid;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 8px;  
+    
+}
+
+
+.signin{
+    margin:auto;
+    padding-top: 20px;
+    background-color:rgb(183,228,199);
+    max-width: 450px;
+    border-radius: 10px;  
+    margin-bottom: 70px; 
+}
+
+.login{     
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:rgb(27,67,50);
+    text-align: center;
+    
+    
+}
+
+.logincontainer{    
+    padding: 20px;
+}
+
+.button{
+    padding-left: 150px;
+    padding-bottom: 20px;
+    
+}
+
+.register{
+    text-align: center;
+}
+
+#form{
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+}
+
+.regbg{
+    margin:auto;
+    padding-top: 20px;
+    background-color:rgb(183,228,199);
+    max-width: 450px;
+    border-radius: 10px;  
+    margin-bottom: 30px; 
+    
+}
+
+.register{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color:rgb(27,67,50);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.registercontainer{
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+
+
+.registerbtn{
+    padding-left: 185px;
+    padding-bottom: 20px;
+}
+
+.already{
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.card-body{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#cartbox{
+    border-color: black;
+    padding: 10px;
+}
+
+.cart{
+    padding-left: 30%;
+    padding-bottom: 1%;
+}
+
+.amtsubmit{
+    text-align: center;
+}
+
+.price{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*single medicine*/
+
+.wrapper{
+    margin-left: auto;
+   /* padding-right: 10px;
+    padding-left: 10px; */
+    display: grid;
+  /*  grid-template-columns: 40% 60%; */ 
+}
+.wrapper div{
+    
+    padding: 1em;
+}
+
+
+.delivery {
+    text-align: center;
+    margin: 10px;
+    background-color: lightblue;
+    border-radius: 4px;
+}
+
+.maininfo div{
+    margin: 10px;
+    border-top: 1px rgb(82,183,136) solid;
+    
+}      
+
+#paypal-button{
+    text-align: center;
+    padding-bottom: 2%;
+    
+}
+
+.chktwrapper{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+      
+
+}
+
+.chktimg{
+ flex:40% ;
+text-align:left;
+padding: 50px;
+
+}
+
+.chktbdy{
+flex:60%;
+
+}
+
+.lower{
+    
+}
+
+html, body{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.row ,.no-gutters{
+    align-items: center;
+}
+
+.cont{
+    margin-bottom: 300px;
+}
+
+.first{
+    position: absolute;
+    margin:auto;
+    padding-top: 20px;   
+    width: 50%;
+    
+}  
+
+.second{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    padding-left: 200px;
+    
+}
+.smcontainer{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    grid-template-areas: "smimg smallinfo";
+    
+
+
+}
+
+.smimg{
+    grid-area: smimg;
+    padding: 5px;
+}
+
+.smallinfo{
+    grid-area: smallinfo;
+    padding: 5px;
+}
+
+@media only screen and (max-width:550px){
+    .smcontainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.6fr;
+        grid-template-areas: 
+        "smimg"
+        "smallinfo";
+    }
+}
+
+

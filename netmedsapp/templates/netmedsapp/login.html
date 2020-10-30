@@ -1,0 +1,36 @@
+{% extends "netmedsapp/base.html" %}
+
+{% block body %}
+    <div class="signin" class="container">
+        <div class="login" class="container">
+            <h2>Login</h2>
+        </div>
+        
+        
+        <div class="logincontainer" class="container">
+            {% if message %}
+                <div>{{ message }}</div>
+            {% endif %}
+    
+            <form action="{% url 'login' %}" method="post" id="form">
+                {% csrf_token %}
+                <div id="user" class="form-group">
+                    <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+                </div>
+                <div id="pass" class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="button">
+                    <input class="btn btn-primary" type="submit" value="Login">
+                    
+                </div>
+                <div class="register">
+                    Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock %}

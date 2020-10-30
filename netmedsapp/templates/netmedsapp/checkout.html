@@ -1,0 +1,91 @@
+{% extends "netmedsapp/base.html" %}
+
+{%block title%}
+<title>Netmedical</title>
+{% endblock %}
+
+{% block body %}
+{% for medicine in orders %}
+
+<div class="row no-gutters">
+
+    <!--Cart page-->
+
+      <div class="column no-gutters"> 
+        <a href="{% url 'single_medicine' medicine.name %}"><img class="card-img-top" src="{{medicine.image.url}}" style="height: 200px;width:325px"
+            alt="Card image cap">
+        </a>
+      </div>
+
+      <div class="card-body" style="margin-left: 80px; margin-bottom:50px">
+            <a href="{% url 'single_medicine' medicine.name %}" ><h4>{{medicine.name}}</h4></a>
+            <p>Price: {{medicine.price}}</p>
+            <button type="button" class="btn btn-secondary checkout_remove" data-medicine="{{medicine.name}}">Remove</button>
+
+            
+      </div>
+    
+
+
+
+<!--  <button type="button" class="checkout_remove" data-medicine="{{medicine.name}}">Remove</button>-->
+
+
+</div>
+{% empty %}
+<p>Please order something before checking out</p>
+{% endfor %}  
+
+
+
+<div class="amtsubmit">
+  <h5 id="total">Total Amount(in Rs): <span id="price">{{price}}</span></h5>
+</div>
+
+
+<div id="paypal-button"></div>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+  var total = `${(document.getElementById("price").textContent)}`;
+
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'Ac1wJcsp6nX2xFv2f4pU2WNrxAE-PYt_N3QhRB4VMVd71w_6Ohiy5cthUG4dQqOUipOuQfeX5ALSVm0m',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+      size: 'large',
+      color: 'blue',
+      shape: 'pill',
+    },
+
+    // Enable Pay Now checkout flow (optional)
+    commit: true,
+
+    // Set up a payment
+    payment: function (data, actions) {
+      return actions.payment.create({
+        transactions: [{
+          amount: {
+            total: `${total}`,
+            currency: 'USD',
+          }
+        }]
+      });
+    },
+    // Execute the payment
+    onAuthorize: function (data, actions) {
+      return actions.payment.execute().then(function () {
+        // Show a confirmation message to the buyer
+        window.alert('Thank you for your purchase!');
+      });
+    }
+  }, '#paypal-button');
+
+</script>
+
+{% endblock %}

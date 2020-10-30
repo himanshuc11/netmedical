@@ -1,0 +1,59 @@
+{%extends 'netmedsapp/base.html'%}
+
+
+{%block title%}
+<title>Netmedical</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="smcontainer">
+    <div class="smimg">
+        <img class="card-img-top" src="{{medicine.image.url}}" style="height: 50%; width:80%;" alt="Card image cap">
+    </div>
+
+    <div class="smallinfo">
+        <h2>{{medicine.name}}</h2>
+        <h4>By {{medicine.manufaturer}}</h4>
+        <h4>Price : Rs {{medicine.price}}</h4>
+        <h4>Quantity: {{medicine.quantity}}</h4>
+        {% if user.is_authenticated %}
+        <button type="button" class="btn btn-outline-success cart_button" data-medicine="{{medicine.name}}">Add To
+            Cart</button>
+        {% endif %}
+    </div>
+
+</div>
+
+
+<div class="lower">
+    <div class="delivery">
+        <p>All the Products are packed and stored Safely</p>
+        <p></p>Terms and conditions apply</p>
+
+    </div>
+    <div class="maininfo">
+        <div>
+            <h5>Medicine description</h5>
+            <p>{{medicine.description}}</p>
+        </div>
+        <div>
+            <h5>Key benefits</h5>
+            <p>{{medicine.key_benifits}}</p>
+        </div>
+        <div>
+            <h5>Dosage</h5>
+            <p>{{medicine.dosage}}</p>
+        </div>
+        <div>
+            <h5>Safety info</h5>
+            <p>{{medicine.safety_info}}</p>
+        </div>
+        <div>
+            <h5>Other info</h5>
+            <p>{{medicine.other_info}}</p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
