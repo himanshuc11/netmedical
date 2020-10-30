@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let search_box = document.getElementById("search_box");
     if(search_box.value !== "")
     {
-      window.location = "http://127.0.0.1:8000/search/" + search_box.value;
+      window.location = "https://netmedical.herokuapp.com/search/" + search_box.value;
     }
   };
   
