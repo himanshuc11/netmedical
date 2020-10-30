@@ -26,6 +26,10 @@ def index(request):
 
 def show_medicine_by_name(request, name):
     queryset = Medicines.objects.filter(name__icontains=name)
+
+    if queryset.count() == 0:
+        return render(request, "netmedsapp/not_found.html")
+
     return render(request, "netmedsapp/search.html", {
         "queryset": queryset
     })
