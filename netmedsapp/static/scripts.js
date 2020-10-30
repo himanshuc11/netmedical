@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   function update_cart(medicine, action) {
-    let url = "http://127.0.0.1:8000/update_cart/";
+    let url = "https://netmedical.herokuapp.com//update_cart/";
     let p = fetch(url, {
       method: "POST",
       headers: {
