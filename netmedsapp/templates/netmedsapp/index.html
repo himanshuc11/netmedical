@@ -59,6 +59,8 @@
 
                 {% if user.is_authenticated %}
                     <button type="button" class="btn btn-outline-success cart_button" data-medicine= "{{medicine.name}}" >Add To Cart</button>
+                {% else %}
+                <button type="button" class="btn btn-outline-success cart_button" style="background-color: lightgray;" data-medicine= "{{medicine.name}}" disabled>Login to Add To Cart</button>
                 {% endif %}
                 
                 
