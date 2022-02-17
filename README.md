@@ -26,4 +26,8 @@ https://netmedical.herokuapp.com/
 # Architecture
 ![architecture drawio](https://user-images.githubusercontent.com/80830461/154442648-ea6e1c62-6b59-4b9a-b750-bd685742fc76.jpg)
 
+# Database Architecture
+
+![Database](https://user-images.githubusercontent.com/80830461/154513370-727ee383-b867-4252-a6cb-4101740f5212.jpeg)
+
 
