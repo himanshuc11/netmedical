@@ -9,12 +9,12 @@ https://netmedical.herokuapp.com/
 + Search Functionality
 + Calculation of total Bill done dynamically on the Front-End
 
-## UI Demo
-![UI](https://github.com/himanshuc11/netmedical/blob/main/UI.gif)
 
 ## Authentication Demo
 ![Authentication](https://github.com/himanshuc11/netmedical/blob/main/Authentication.gif)
 
+## UI Demo
+![UI](https://github.com/himanshuc11/netmedical/blob/main/UI.gif)
 
 ## Cart And Checkout Demo
 ![Checkout](https://github.com/himanshuc11/netmedical/blob/main/Checkout.gif)
