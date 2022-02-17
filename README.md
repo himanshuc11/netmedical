@@ -24,4 +24,6 @@ https://netmedical.herokuapp.com/
 + Paypal SDK
 
 # Architecture
-![architecture drawio](https://user-images.githubusercontent.com/80830461/154442058-a2e97c0c-3f0d-4c90-93bd-bf98ff460015.png)
+![architecture drawio](https://user-images.githubusercontent.com/80830461/154442648-ea6e1c62-6b59-4b9a-b750-bd685742fc76.jpg)
+
+
