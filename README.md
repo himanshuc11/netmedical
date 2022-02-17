@@ -35,7 +35,16 @@ https://netmedical.herokuapp.com/
 ![architecture drawio](https://user-images.githubusercontent.com/80830461/154442648-ea6e1c62-6b59-4b9a-b750-bd685742fc76.jpg)
 
 # Database Architecture
-
 ![Database](https://user-images.githubusercontent.com/80830461/154513370-727ee383-b867-4252-a6cb-4101740f5212.jpeg)
+
+# Learning Outcome
++ Learnt to build a clean and functional Website
++ Understood various Concepts of Django
++ Understood how various components like cloudinary and Paypal Systems can be integrated
++ How to use Vanilla JS and its drawbacks
+
+# Improvement's that can be made
++ Implement project like SPA to avoid reload of entire page
++ Implement predictive search and autocomplete with help of debouncing
 
 
